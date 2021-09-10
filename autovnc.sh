@@ -10,7 +10,7 @@ sed -i "s/<USER>/root/g"  /usr/lib/systemd/system/vncserver@:1.service
 systemctl daemon-reload
 systemctl enable vncserver@:1.service
 setenforce 0
-systemctl stop firewalld.service #Í£Ö¹firewall
-systemctl disable firewalld.service #½ûÖ¹firewall¿ª»úÆô¶¯
+systemctl stop firewalld.service 
+systemctl disable firewalld.service 
 vncpasswd
 
