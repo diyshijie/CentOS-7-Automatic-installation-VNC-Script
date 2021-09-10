@@ -1,4 +1,3 @@
-sudo -i
 yum check-update
 yum groupinstall -y "X Window System"
 yum install -y gnome-classic-session gnome-terminalnautilus-open-terminal control-center liberation-mono-fonts gnome-terminal.x86_64 cjkuni-ukai-fonts perl firefox  tigervnc-server net-tools
@@ -11,7 +10,7 @@ sed -i "s/<USER>/root/g"  /usr/lib/systemd/system/vncserver@:1.service
 systemctl daemon-reload
 systemctl enable vncserver@:1.service
 setenforce 0
-systemctl stop firewalld.service #Í£Ö¹firewall
-systemctl disable firewalld.service #½ûÖ¹firewall¿ª»úÆô¶¯
+systemctl stop firewalld.service #ÃÂ£Ã–Â¹firewall
+systemctl disable firewalld.service #Â½Ã»Ã–Â¹firewallÂ¿ÂªÂ»ÃºÃ†Ã´Â¶Â¯
 vncpasswd
 
